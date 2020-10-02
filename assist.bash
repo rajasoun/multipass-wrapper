@@ -4,8 +4,8 @@ set -eo pipefail
 IFS=$'\n\t'
 
 CPU="2"
-MEMORY="2G"
-DISK="10G"
+MEMORY="4G"
+DISK="25G"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=src/load.bash
