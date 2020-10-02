@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+NC=$'\e[0m' # No Color
+BOLD=$'\033[1m'
+UNDERLINE=$'\033[4m'
+RED=$'\e[31m'
+GREEN=$'\e[32m'
+BLUE=$'\e[34m'
+
+function check_preconditions() {
+  if ! [ -x "$(command -v multipass)" ]; then
+    echo 'Error: multipass is not installed.' >&2
+    exit 1
+  fi
+}
+
+function get_vm_name() {
+  read -p "${BLUE}VM Name: ${NC}" VM_NAME
+}
