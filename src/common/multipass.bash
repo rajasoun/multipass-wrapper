@@ -22,10 +22,10 @@ function add_google_dns(){
 function upgrade(){
     VM_NAME=$1
      echo "${GREEN}Upgrading Packages...${NC}"
-    multipass exec  "$VM_NAME" -- DEBIAN_FRONTEND=noninteractive sudo apt-get update -y
-    multipass exec  "$VM_NAME" -- DEBIAN_FRONTEND=noninteractive sudo apt-get install python3.8 python3-pip -y
-    multipass exec  "$VM_NAME" -- DEBIAN_FRONTEND=noninteractive sudo apt-get upgrade -y
-    multipass exec  "$VM_NAME" -- DEBIAN_FRONTEND=noninteractive sudo apt-get -y autoremove
+    multipass exec  "$VM_NAME" -- sudo apt-get update -y -q
+    multipass exec  "$VM_NAME" -- sudo apt-get install python3.8 python3-pip -y -q
+    multipass exec  "$VM_NAME" -- sudo apt-get upgrade -y -q
+    multipass exec  "$VM_NAME" -- sudo apt-get -y autoremove
 }
 
 function mount_current_dir(){
