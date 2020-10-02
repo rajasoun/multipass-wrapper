@@ -33,7 +33,7 @@ case $action in
       multipass shell  "$VM_NAME"
       ;;
     status)
-      echo "Running Containers ..."
+      echo "${BLUE}Running Containers ...${NC}"
       multipass list
       get_vm_name
       multipass info $VM_NAME
@@ -43,6 +43,7 @@ case $action in
       multipass stop "$VM_NAME" && multipass delete "$VM_NAME" && multipass purge
       ;;
     *)
+      echo "${RED}Usage: ./assist <command>${NC}"
 cat <<-EOF
 Commands:
 ---------
