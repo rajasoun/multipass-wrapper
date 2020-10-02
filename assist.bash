@@ -34,9 +34,9 @@ case $action in
       ;;
     status)
       echo "Running Containers ..."
-      multipass list 
+      multipass list
       get_vm_name
-      multipass info $VM_NAME 
+      multipass info $VM_NAME
       ;;
     clean)
       get_vm_name
