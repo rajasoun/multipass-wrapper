@@ -37,6 +37,19 @@ function setup(){
     VM_NAME=$1
     launch_vm "$VM_NAME"
     add_google_dns "$VM_NAME"
-    upgrade "$VM_NAME"
     mount_current_dir "$VM_NAME"
+}
+
+function display_runnning_vms(){
+    #Atleast one VM is Available
+    if [ $(multipass ls | grep -c "No instances found.") -eq 0 ]
+    then
+        echo "${BLUE}Running VMs ...${NC}"
+        multipass list
+    else
+        if [ $action != "setup" ]
+        then
+            raise_error "${RED}No VM instances found.. Exiting...${NC}"
+        fi
+    fi
 }
