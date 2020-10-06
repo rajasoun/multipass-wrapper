@@ -3,6 +3,12 @@ Bash Wrapper to Multipass
 
 ### Getting Started
 
+Install [pipenv](https://pypi.org/project/pipenv/)
+```sh
+$ pip3 install pipenv --user
+```
+
+
 ```sh
 $ git clone https://github.com/rajasoun/multipass-wrapper
 $ cd multipass-wrapper
