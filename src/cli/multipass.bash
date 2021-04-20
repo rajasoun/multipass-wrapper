@@ -20,16 +20,16 @@ case $action in
       display_runnning_vms "$action"
       get_vm_name
       upgrade "$VM_NAME"
-      ;; 
+      ;;
     down)
       display_runnning_vms "$action"
-      get_vm_name 
+      get_vm_name
       multipass stop "$VM_NAME"
       ;;
     shell)
       display_runnning_vms "$action"
       get_vm_name
-      multipass shell  "$VM_NAME" 
+      multipass shell  "$VM_NAME"
       ;;
     status)
       display_runnning_vms "$action"
@@ -48,7 +48,7 @@ Commands:
 ---------
   setup               -> Setup VM
   up                  -> Bring Up VM
-  upgrade             -> Upgrade VM 
+  upgrade             -> Upgrade VM
   down                -> Bring Down VM
   shell               -> Enter Shell
   status              -> Status of all multipass VMs
