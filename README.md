@@ -18,13 +18,17 @@ Bash Wrapper to Multipass and microk8s
 
 1. `./assist.bash microk8s pods ` to list all pods
 
-### kubectl
+### kubectl from host (optional)
 
 ```
 $ export "$(< kubeconfig/env xargs)"
 $ kubectl get pods --all-namespaces
 
 ```
+
+### Invoke individual shell script functions
+
+1. `bash -c "source src/load.bash && declare -F && all_colors"`
 
 ### override defaults
 
