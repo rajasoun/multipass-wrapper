@@ -14,3 +14,5 @@ source "$SCRIPT_DIR/common/tektoncd.bash"
 source "$SCRIPT_DIR/cli/multipass.bash"
 # shellcheck source=/dev/null
 source "$SCRIPT_DIR/cli/microk8s.bash"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/cli/k3d.bash"
