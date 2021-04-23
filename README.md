@@ -1,6 +1,6 @@
 # multipass-wrapper
 
-Bash Wrapper to Multipass and microk8s
+Bash Wrapper to Multipass that supports microk8s, k3d/k3s and tilt
 
 ## Getting Started
 
