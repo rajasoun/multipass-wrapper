@@ -19,7 +19,8 @@ case $action in
       # multipass exec "$VM_NAME" -- sudo chown -f -R ubuntu ~/.kube || echo "chown  ❌"
       token=$(multipass exec "$VM_NAME" -- kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
       multipass exec "$VM_NAME" -- kubectl -n kube-system describe secret "$token" || echo "secret  ❌"
-      multipass exec "$VM_NAME" -- microk8s config > kubeconfig/.admin.kubeconfig  || echo "secret  ❌"
+      # enable kubeconfig on host system
+      multipass exec "$VM_NAME" -- microk8s config > kubeconfig/.admin.kubeconfig  || echo "kubeconfig  ❌"
       ;;
     status)
       _multipass "$@"
